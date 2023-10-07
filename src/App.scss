@@ -1,0 +1,79 @@
+:root {
+  --mc-1: #F5F4F9;
+  --mc-2: #5E3DB3;
+  --mc-3: #090C35;
+  --swiper-pagination-color: var(--mc-2);
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+}
+
+#athlets .content-wrapper {
+  justify-content: end;
+}
+
+#players {
+  .content-wrapper {
+    @media (min-width: 521px) and (max-width: 820px) {
+      padding-left: 1.25rem;
+    }
+  }
+}
+
+.detail-m {
+  background-color: var(--mc-1);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--mc-2);
+}
+
+.detail-item {
+  .detail-title {
+    .numb {
+      position: relative;
+      &::after{
+        content: '';
+        width: 100%;
+        height: 5px;
+        background-color: var(--mc-2);
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        border-radius: 4px;
+      }
+    }
+  }
+  @media screen and (min-width: 521px) {
+    &.skin-med {
+      background-color: var(--mc-1);
+    }
+    &.skin-dark {
+      background-color: var(--mc-2);
+      .detail-title {
+        .numb {
+          &::after {
+            background-color: #fff;
+          }
+        }
+      }
+      .detail-desc {
+        color: #fff;
+      }
+    }
+    &.skin-darker {
+      background-color: var(--mc-3);
+      .detail-title {
+        .numb {
+          color: #8F6BE8;
+          &::after {
+            background-color: #fff;
+          }
+        }
+      }
+      .detail-desc {
+        color: #fff;
+      }
+    }
+  }
+}
